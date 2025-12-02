@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dev Toolkit — Pure JS Tests</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial;margin:16px}
+    .result.pass{color:green}
+    .result.fail{color:red}
+    .summary{margin:8px 0;padding:8px;border:1px solid #ddd}
+    pre{background:#f7f7f7;padding:8px}
+  </style>
+</head>
+<body>
+  <h1>Dev Toolkit — Pure JS Test Runner</h1>
+  <div id="summary" class="summary">Running tests…</div>
+  <div id="results"></div>
+
+  <!-- Test framework (tiny, pure JS) -->
+  <script src="assert.js"></script>
+
+  <!-- Test files (they register tests via registerTest) -->
+  <script src="temperature.test.js"></script>
+  <script src="hexToRgb.test.js"></script>
+  <script src="base64.test.js"></script>
+  <script src="jsonFormatter.test.js"></script>
+
+  <!-- Runner executes registered tests sequentially -->
+  <script src="runner.js"></script>
+</body>
+</html>
